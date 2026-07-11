@@ -50,7 +50,7 @@ export default function Register() {
           />
           <TextField
             fullWidth
-            label="Fullname"
+            label="Full Name"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             sx={{ mb: 2 }}
