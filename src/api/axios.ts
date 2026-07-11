@@ -2,7 +2,7 @@ import axios from 'axios'
 import type { ApiError } from '../types'
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080'
+  baseURL: 'https://cs2031-2026-1-pc2-techstore-production.up.railway.app/'
 })
 
 api.interceptors.request.use((config) => {

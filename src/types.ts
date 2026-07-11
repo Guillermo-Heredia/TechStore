@@ -1,6 +1,6 @@
 export interface User {
   username: string
-  fullname: string
+  fullName: string
   email: string
   password: string
 }

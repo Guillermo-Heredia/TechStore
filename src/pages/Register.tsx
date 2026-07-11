@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext'
 
 export default function Register() {
   const [username, setUsername] = useState('')
-  const [fullname, setFullname] = useState('')
+  const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -17,13 +17,13 @@ export default function Register() {
     e.preventDefault()
     setError('')
 
-    if (!username || !fullname || !email || !password) {
+    if (!username || !fullName || !email || !password) {
       setError('Todos los campos son obligatorios')
       return
     }
 
     try {
-      await register({ username, fullname, email, password })
+      await register({ username, fullName, email, password })
       setSuccess(true)
       setTimeout(() => navigate('/login'), 1500)
     } catch (err) {
@@ -51,8 +51,8 @@ export default function Register() {
           <TextField
             fullWidth
             label="Fullname"
-            value={fullname}
-            onChange={(e) => setFullname(e.target.value)}
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
             sx={{ mb: 2 }}
           />
           <TextField
